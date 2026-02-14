@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google"; // 1. Używamy czcionek pasujących do stylu "Nature"
 import "./globals.css";
 import { Navbar } from "@/components/shared/Navbar"; // 2. Importujemy nasz Navbar
+import { Footer } from "@/components/shared/Footer"; // 1. Importujemy Stopkę
 
 // Konfigurujemy czcionkę podstawową (tekst)
 const inter = Inter({
@@ -26,12 +27,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pl"> {/* 3. Zmieniamy na język polski */}
+    <html lang="pl">
+      {" "}
+      {/* 3. Zmieniamy na język polski */}
       <body
         className={`${inter.variable} ${playfair.variable} antialiased bg-nature-sand text-nature-dark`}
       >
         <Navbar /> {/* 4. Wstawiamy Menu na samą górę */}
         {children}
+        <Footer /> {/* 2. Dodajemy Stopkę na samym dole */}
       </body>
     </html>
   );
