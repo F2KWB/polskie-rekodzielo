@@ -1,26 +1,20 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Definiujemy nasze kolory "Polskiego Rękodzieła" */
+  --color-nature-dark: #052c24;
+  --color-nature-forest: #064e3b;
+  --color-nature-accent: #d97706;
+  --color-nature-sand: #f5f5f4;
+  --color-nature-wood: #451a03;
+
+  /* Definiujemy czcionki */
+  --font-serif: var(--font-serif), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Podstawowe style */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-nature-sand);
+  color: var(--color-nature-dark);
 }
